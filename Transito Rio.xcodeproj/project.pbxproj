@@ -101,8 +101,7 @@
 		D23033AF2B17E3130017F60A /* Transito Rio */ = {
 			isa = PBXGroup;
 			children = (
-				D23033B02B17E3130017F60A /* AppDelegate.swift */,
-				D23033B22B17E3130017F60A /* SceneDelegate.swift */,
+				D23033E32B17E50E0017F60A /* AppDelegate */,
 				D23033B42B17E3130017F60A /* ViewController.swift */,
 				D23033B62B17E3130017F60A /* Main.storyboard */,
 				D23033BC2B17E3130017F60A /* Assets.xcassets */,
@@ -128,6 +127,15 @@
 				D23033D62B17E3140017F60A /* Transito_RioUITestsLaunchTests.swift */,
 			);
 			path = "Transito RioUITests";
+			sourceTree = "<group>";
+		};
+		D23033E32B17E50E0017F60A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D23033B02B17E3130017F60A /* AppDelegate.swift */,
+				D23033B22B17E3130017F60A /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
