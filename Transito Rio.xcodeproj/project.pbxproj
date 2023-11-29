@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D23033B12B17E3130017F60A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033B02B17E3130017F60A /* AppDelegate.swift */; };
+		D23033B32B17E3130017F60A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033B22B17E3130017F60A /* SceneDelegate.swift */; };
+		D23033B52B17E3130017F60A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033B42B17E3130017F60A /* ViewController.swift */; };
+		D23033B82B17E3130017F60A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23033B62B17E3130017F60A /* Main.storyboard */; };
+		D23033BB2B17E3130017F60A /* Transito_Rio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D23033B92B17E3130017F60A /* Transito_Rio.xcdatamodeld */; };
+		D23033BD2B17E3130017F60A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D23033BC2B17E3130017F60A /* Assets.xcassets */; };
+		D23033C02B17E3130017F60A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23033BE2B17E3130017F60A /* LaunchScreen.storyboard */; };
+		D23033CB2B17E3140017F60A /* Transito_RioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033CA2B17E3140017F60A /* Transito_RioTests.swift */; };
+		D23033D52B17E3140017F60A /* Transito_RioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033D42B17E3140017F60A /* Transito_RioUITests.swift */; };
+		D23033D72B17E3140017F60A /* Transito_RioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033D62B17E3140017F60A /* Transito_RioUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D23033C72B17E3140017F60A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D23033A52B17E3120017F60A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D23033AC2B17E3120017F60A;
+			remoteInfo = "Transito Rio";
+		};
+		D23033D12B17E3140017F60A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D23033A52B17E3120017F60A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D23033AC2B17E3120017F60A;
+			remoteInfo = "Transito Rio";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D23033AD2B17E3130017F60A /* Transito Rio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Transito Rio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D23033B02B17E3130017F60A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D23033B22B17E3130017F60A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D23033B42B17E3130017F60A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D23033B72B17E3130017F60A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D23033BA2B17E3130017F60A /* Transito_Rio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Transito_Rio.xcdatamodel; sourceTree = "<group>"; };
+		D23033BC2B17E3130017F60A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D23033BF2B17E3130017F60A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D23033C12B17E3130017F60A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D23033C62B17E3140017F60A /* Transito RioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Transito RioTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D23033CA2B17E3140017F60A /* Transito_RioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transito_RioTests.swift; sourceTree = "<group>"; };
+		D23033D02B17E3140017F60A /* Transito RioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Transito RioUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D23033D42B17E3140017F60A /* Transito_RioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transito_RioUITests.swift; sourceTree = "<group>"; };
+		D23033D62B17E3140017F60A /* Transito_RioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transito_RioUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D23033AA2B17E3120017F60A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D23033C32B17E3140017F60A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D23033CD2B17E3140017F60A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D23033A42B17E3120017F60A = {
+			isa = PBXGroup;
+			children = (
+				D23033AF2B17E3130017F60A /* Transito Rio */,
+				D23033C92B17E3140017F60A /* Transito RioTests */,
+				D23033D32B17E3140017F60A /* Transito RioUITests */,
+				D23033AE2B17E3130017F60A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D23033AE2B17E3130017F60A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D23033AD2B17E3130017F60A /* Transito Rio.app */,
+				D23033C62B17E3140017F60A /* Transito RioTests.xctest */,
+				D23033D02B17E3140017F60A /* Transito RioUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D23033AF2B17E3130017F60A /* Transito Rio */ = {
+			isa = PBXGroup;
+			children = (
+				D23033B02B17E3130017F60A /* AppDelegate.swift */,
+				D23033B22B17E3130017F60A /* SceneDelegate.swift */,
+				D23033B42B17E3130017F60A /* ViewController.swift */,
+				D23033B62B17E3130017F60A /* Main.storyboard */,
+				D23033BC2B17E3130017F60A /* Assets.xcassets */,
+				D23033BE2B17E3130017F60A /* LaunchScreen.storyboard */,
+				D23033C12B17E3130017F60A /* Info.plist */,
+				D23033B92B17E3130017F60A /* Transito_Rio.xcdatamodeld */,
+			);
+			path = "Transito Rio";
+			sourceTree = "<group>";
+		};
+		D23033C92B17E3140017F60A /* Transito RioTests */ = {
+			isa = PBXGroup;
+			children = (
+				D23033CA2B17E3140017F60A /* Transito_RioTests.swift */,
+			);
+			path = "Transito RioTests";
+			sourceTree = "<group>";
+		};
+		D23033D32B17E3140017F60A /* Transito RioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D23033D42B17E3140017F60A /* Transito_RioUITests.swift */,
+				D23033D62B17E3140017F60A /* Transito_RioUITestsLaunchTests.swift */,
+			);
+			path = "Transito RioUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D23033AC2B17E3120017F60A /* Transito Rio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D23033DA2B17E3140017F60A /* Build configuration list for PBXNativeTarget "Transito Rio" */;
+			buildPhases = (
+				D23033A92B17E3120017F60A /* Sources */,
+				D23033AA2B17E3120017F60A /* Frameworks */,
+				D23033AB2B17E3120017F60A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Transito Rio";
+			productName = "Transito Rio";
+			productReference = D23033AD2B17E3130017F60A /* Transito Rio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D23033C52B17E3140017F60A /* Transito RioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D23033DD2B17E3140017F60A /* Build configuration list for PBXNativeTarget "Transito RioTests" */;
+			buildPhases = (
+				D23033C22B17E3140017F60A /* Sources */,
+				D23033C32B17E3140017F60A /* Frameworks */,
+				D23033C42B17E3140017F60A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D23033C82B17E3140017F60A /* PBXTargetDependency */,
+			);
+			name = "Transito RioTests";
+			productName = "Transito RioTests";
+			productReference = D23033C62B17E3140017F60A /* Transito RioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D23033CF2B17E3140017F60A /* Transito RioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D23033E02B17E3140017F60A /* Build configuration list for PBXNativeTarget "Transito RioUITests" */;
+			buildPhases = (
+				D23033CC2B17E3140017F60A /* Sources */,
+				D23033CD2B17E3140017F60A /* Frameworks */,
+				D23033CE2B17E3140017F60A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D23033D22B17E3140017F60A /* PBXTargetDependency */,
+			);
+			name = "Transito RioUITests";
+			productName = "Transito RioUITests";
+			productReference = D23033D02B17E3140017F60A /* Transito RioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D23033A52B17E3120017F60A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					D23033AC2B17E3120017F60A = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					D23033C52B17E3140017F60A = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = D23033AC2B17E3120017F60A;
+					};
+					D23033CF2B17E3140017F60A = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = D23033AC2B17E3120017F60A;
+					};
+				};
+			};
+			buildConfigurationList = D23033A82B17E3120017F60A /* Build configuration list for PBXProject "Transito Rio" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D23033A42B17E3120017F60A;
+			productRefGroup = D23033AE2B17E3130017F60A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D23033AC2B17E3120017F60A /* Transito Rio */,
+				D23033C52B17E3140017F60A /* Transito RioTests */,
+				D23033CF2B17E3140017F60A /* Transito RioUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D23033AB2B17E3120017F60A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D23033C02B17E3130017F60A /* LaunchScreen.storyboard in Resources */,
+				D23033BD2B17E3130017F60A /* Assets.xcassets in Resources */,
+				D23033B82B17E3130017F60A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D23033C42B17E3140017F60A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D23033CE2B17E3140017F60A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D23033A92B17E3120017F60A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D23033B52B17E3130017F60A /* ViewController.swift in Sources */,
+				D23033B12B17E3130017F60A /* AppDelegate.swift in Sources */,
+				D23033BB2B17E3130017F60A /* Transito_Rio.xcdatamodeld in Sources */,
+				D23033B32B17E3130017F60A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D23033C22B17E3140017F60A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D23033CB2B17E3140017F60A /* Transito_RioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D23033CC2B17E3140017F60A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D23033D52B17E3140017F60A /* Transito_RioUITests.swift in Sources */,
+				D23033D72B17E3140017F60A /* Transito_RioUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D23033C82B17E3140017F60A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D23033AC2B17E3120017F60A /* Transito Rio */;
+			targetProxy = D23033C72B17E3140017F60A /* PBXContainerItemProxy */;
+		};
+		D23033D22B17E3140017F60A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D23033AC2B17E3120017F60A /* Transito Rio */;
+			targetProxy = D23033D12B17E3140017F60A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D23033B62B17E3130017F60A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D23033B72B17E3130017F60A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D23033BE2B17E3130017F60A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D23033BF2B17E3130017F60A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D23033D82B17E3140017F60A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D23033D92B17E3140017F60A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D23033DB2B17E3140017F60A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FFSK8595GW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Transito Rio/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.rodrigoamora.transitorio.Transito-Rio";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D23033DC2B17E3140017F60A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FFSK8595GW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Transito Rio/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.rodrigoamora.transitorio.Transito-Rio";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D23033DE2B17E3140017F60A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FFSK8595GW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.rodrigoamora.transitorio.Transito-RioTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Transito Rio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Transito Rio";
+			};
+			name = Debug;
+		};
+		D23033DF2B17E3140017F60A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FFSK8595GW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.rodrigoamora.transitorio.Transito-RioTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Transito Rio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Transito Rio";
+			};
+			name = Release;
+		};
+		D23033E12B17E3140017F60A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FFSK8595GW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.rodrigoamora.transitorio.Transito-RioUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Transito Rio";
+			};
+			name = Debug;
+		};
+		D23033E22B17E3140017F60A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FFSK8595GW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.rodrigoamora.transitorio.Transito-RioUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Transito Rio";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D23033A82B17E3120017F60A /* Build configuration list for PBXProject "Transito Rio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D23033D82B17E3140017F60A /* Debug */,
+				D23033D92B17E3140017F60A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D23033DA2B17E3140017F60A /* Build configuration list for PBXNativeTarget "Transito Rio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D23033DB2B17E3140017F60A /* Debug */,
+				D23033DC2B17E3140017F60A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D23033DD2B17E3140017F60A /* Build configuration list for PBXNativeTarget "Transito RioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D23033DE2B17E3140017F60A /* Debug */,
+				D23033DF2B17E3140017F60A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D23033E02B17E3140017F60A /* Build configuration list for PBXNativeTarget "Transito RioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D23033E12B17E3140017F60A /* Debug */,
+				D23033E22B17E3140017F60A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D23033B92B17E3130017F60A /* Transito_Rio.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D23033BA2B17E3130017F60A /* Transito_Rio.xcdatamodel */,
+			);
+			currentVersion = D23033BA2B17E3130017F60A /* Transito_Rio.xcdatamodel */;
+			path = Transito_Rio.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D23033A52B17E3120017F60A /* Project object */;
+}
