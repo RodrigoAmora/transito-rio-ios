@@ -70,7 +70,6 @@ class OnibusViewController: UIViewController {
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: latitude ?? 0.0, longitude: longitude ?? 0.0)
             annotation.title = onibus.ordem
-            //annotation.subtitle = salon.address.formatAddress()
             
             self.onibusMapView.addAnnotation(annotation)
         }
