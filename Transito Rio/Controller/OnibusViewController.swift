@@ -16,6 +16,7 @@ class OnibusViewController: UIViewController {
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var onibusMapView: MKMapView!
     
+    // MARK: - Atributes
     private let locationManager = CLLocationManager()
     private var latitude: Double = 0.0
     private var longitude: Double = 0.0
@@ -75,7 +76,6 @@ class OnibusViewController: UIViewController {
             self.onibusMapView.addAnnotation(annotation)
         }
     }
-
 }
 
 // MARK: - CLLocationManagerDelegate
