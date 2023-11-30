@@ -26,6 +26,7 @@
 		D23033EF2B17EA810017F60A /* OnibusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033EE2B17EA810017F60A /* OnibusService.swift */; };
 		D26572202B1859C7002C7BDC /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D265721F2B1859C7002C7BDC /* Resource.swift */; };
 		D26572232B186603002C7BDC /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26572222B186603002C7BDC /* DateFormatterExtension.swift */; };
+		D26572252B186A52002C7BDC /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26572242B186A52002C7BDC /* UIActivityIndicatorView.swift */; };
 		D290035F2B183F7B00A91975 /* OnibusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290035E2B183F7B00A91975 /* OnibusViewModel.swift */; };
 		D29003622B183FE400A91975 /* OnibusDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29003612B183FE400A91975 /* OnibusDelegate.swift */; };
 		D29003652B18408400A91975 /* OnibusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29003642B18408400A91975 /* OnibusRepository.swift */; };
@@ -76,6 +77,7 @@
 		D23033EE2B17EA810017F60A /* OnibusService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnibusService.swift; sourceTree = "<group>"; };
 		D265721F2B1859C7002C7BDC /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		D26572222B186603002C7BDC /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		D26572242B186A52002C7BDC /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
 		D290035E2B183F7B00A91975 /* OnibusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnibusViewModel.swift; sourceTree = "<group>"; };
 		D29003612B183FE400A91975 /* OnibusDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnibusDelegate.swift; sourceTree = "<group>"; };
 		D29003642B18408400A91975 /* OnibusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnibusRepository.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				D26572222B186603002C7BDC /* DateFormatterExtension.swift */,
+				D26572242B186A52002C7BDC /* UIActivityIndicatorView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				D26572232B186603002C7BDC /* DateFormatterExtension.swift in Sources */,
 				D23033B12B17E3130017F60A /* AppDelegate.swift in Sources */,
 				D26572202B1859C7002C7BDC /* Resource.swift in Sources */,
+				D26572252B186A52002C7BDC /* UIActivityIndicatorView.swift in Sources */,
 				D23033EB2B17E7D80017F60A /* Onibus.swift in Sources */,
 				D290035F2B183F7B00A91975 /* OnibusViewModel.swift in Sources */,
 				D23033BB2B17E3130017F60A /* Transito_Rio.xcdatamodeld in Sources */,

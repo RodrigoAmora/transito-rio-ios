@@ -13,6 +13,7 @@ import CoreLocation
 class OnibusViewController: UIViewController {
 
     // MARK: - @IBOutlets
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var onibusMapView: MKMapView!
     
     private let locationManager = CLLocationManager()
@@ -44,7 +45,7 @@ class OnibusViewController: UIViewController {
     }
     
     private func buscarOnibus() {
-//        self.activityIndicatorView.configureActivityIndicatorView()
+        self.activityIndicatorView.configureActivityIndicatorView()
         self.onibusViewModel.buscarOnibus()
     }
     
@@ -123,14 +124,14 @@ extension OnibusViewController: MKMapViewDelegate {
 extension OnibusViewController: OnibusDelegate {
     func populateMap(listaOnibus: [Onibus]) {
         self.listaOnibus = listaOnibus
-        //self.activityIndicatorView.hideActivityIndicatorView()
+        self.activityIndicatorView.hideActivityIndicatorView()
         self.populateMapView(listaOnibus: listaOnibus)
     }
     
     func replaceAll(listaOnibus: [Onibus]) {}
     
     func showError() {
-        
+        self.activityIndicatorView.hideActivityIndicatorView()
     }
 }
 
