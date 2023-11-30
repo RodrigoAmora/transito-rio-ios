@@ -11,9 +11,7 @@ import Alamofire
 class OnibusService {
     
     func buscarOnibus(completion: @escaping(_ listaOnibus: [Onibus], _ error: Int?) -> Void) {
-        let dateStringFormatter = DateFormatter()
-        dateStringFormatter.dateFormat = "yyyy-dd-MM+HH:mm:ss"
-        let dateFormated = dateStringFormatter.string(from: Date())
+        let dateFormated = DateFormatter().capturarDataHoraAtual()
         
         let baseURL = "https://dados.mobilidade.rio/gps/sppo"
         let onibusURL = "\(baseURL)?dataInicial=\(dateFormated)"

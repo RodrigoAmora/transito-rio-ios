@@ -25,6 +25,7 @@
 		D23033EB2B17E7D80017F60A /* Onibus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033EA2B17E7D80017F60A /* Onibus.swift */; };
 		D23033EF2B17EA810017F60A /* OnibusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033EE2B17EA810017F60A /* OnibusService.swift */; };
 		D26572202B1859C7002C7BDC /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D265721F2B1859C7002C7BDC /* Resource.swift */; };
+		D26572232B186603002C7BDC /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26572222B186603002C7BDC /* DateFormatterExtension.swift */; };
 		D290035F2B183F7B00A91975 /* OnibusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290035E2B183F7B00A91975 /* OnibusViewModel.swift */; };
 		D29003622B183FE400A91975 /* OnibusDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29003612B183FE400A91975 /* OnibusDelegate.swift */; };
 		D29003652B18408400A91975 /* OnibusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29003642B18408400A91975 /* OnibusRepository.swift */; };
@@ -74,6 +75,7 @@
 		D23033EA2B17E7D80017F60A /* Onibus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onibus.swift; sourceTree = "<group>"; };
 		D23033EE2B17EA810017F60A /* OnibusService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnibusService.swift; sourceTree = "<group>"; };
 		D265721F2B1859C7002C7BDC /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		D26572222B186603002C7BDC /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		D290035E2B183F7B00A91975 /* OnibusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnibusViewModel.swift; sourceTree = "<group>"; };
 		D29003612B183FE400A91975 /* OnibusDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnibusDelegate.swift; sourceTree = "<group>"; };
 		D29003642B18408400A91975 /* OnibusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnibusRepository.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		D23033AF2B17E3130017F60A /* Transito Rio */ = {
 			isa = PBXGroup;
 			children = (
+				D26572212B1865E1002C7BDC /* Extension */,
 				D23033E32B17E50E0017F60A /* AppDelegate */,
 				D23033BC2B17E3130017F60A /* Assets.xcassets */,
 				D23033E42B17E5350017F60A /* Controller */,
@@ -240,6 +243,14 @@
 				D265721F2B1859C7002C7BDC /* Resource.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D26572212B1865E1002C7BDC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D26572222B186603002C7BDC /* DateFormatterExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D290035D2B183F6400A91975 /* ViewModel */ = {
@@ -508,6 +519,7 @@
 			files = (
 				D23033E82B17E5AD0017F60A /* OnibusViewController.swift in Sources */,
 				D23033B52B17E3130017F60A /* ViewController.swift in Sources */,
+				D26572232B186603002C7BDC /* DateFormatterExtension.swift in Sources */,
 				D23033B12B17E3130017F60A /* AppDelegate.swift in Sources */,
 				D26572202B1859C7002C7BDC /* Resource.swift in Sources */,
 				D23033EB2B17E7D80017F60A /* Onibus.swift in Sources */,
