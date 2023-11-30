@@ -1,0 +1,6 @@
+framework module Pods_Transito_Rio_Transito_RioUITests {
+  umbrella header "Pods-Transito Rio-Transito RioUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
