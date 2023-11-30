@@ -19,8 +19,31 @@ class OnibusRepository {
             if listaOnibus.count == 0 {
                 completion(Resource(result: nil, errorCode: error))
             } else {
-                completion(Resource(result: listaOnibus))
+                let novaListaOnibus = self?.verificarHoraDeEnvioDaLocalizacao(listaOnibus: listaOnibus)
+                completion(Resource(result: novaListaOnibus))
             }
         })
+    }
+    
+    private func verificarHoraDeEnvioDaLocalizacao(listaOnibus: [Onibus]) -> [Onibus] {
+        var novaListaOnibus: [Onibus] = []
+        
+        for onibus in listaOnibus {
+            let dataHoraEnvio = Date(timeIntervalSinceNow: Double(onibus.datahoraenvio) ?? 0)
+
+            let tempoEmSecundos = Calendar.current.component(.second, from: dataHoraEnvio)
+            if tempoEmSecundos <= 10 {
+                var posicao = 0
+                for onibusJaAdicionado in novaListaOnibus {
+                    if onibusJaAdicionado.ordem == onibus.ordem {
+                        novaListaOnibus.remove(at: posicao)
+                    }
+                    posicao += 1
+                }
+                novaListaOnibus.append(onibus)
+            }
+        }
+        
+        return novaListaOnibus
     }
 }
