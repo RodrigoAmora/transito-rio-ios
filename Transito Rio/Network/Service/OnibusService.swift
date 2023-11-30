@@ -29,7 +29,6 @@ class OnibusService {
                                             guard let data = response.data else { return }
                                             
                                             let listaOnibus = try JSONDecoder().decode([Onibus].self, from: data)
-                                            print("conut: \(listaOnibus.count)")
                                             completion(listaOnibus, nil)
                                         } catch {
                                             print("Error retriving questions \(error)")
