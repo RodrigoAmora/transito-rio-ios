@@ -15,6 +15,7 @@ class Onibus: NSCoding, Decodable {
     var latitude: String = ""
     var longitude: String = ""
     var linha: String = ""
+    var datahoraenvio: String = ""
     
     // MARK: - NSCoding
     func encode(with coder: NSCoder) {
@@ -22,6 +23,7 @@ class Onibus: NSCoding, Decodable {
         coder.encode(latitude, forKey: "latitude")
         coder.encode(longitude, forKey: "longitude")
         coder.encode(linha, forKey: "linha")
+        coder.encode(datahoraenvio, forKey: "datahoraenvio")
     }
     
     required init?(coder: NSCoder) {
@@ -29,5 +31,6 @@ class Onibus: NSCoding, Decodable {
         latitude = coder.decodeObject(forKey: "latitude") as! String
         longitude = coder.decodeObject(forKey: "longitude") as! String
         linha = coder.decodeObject(forKey: "linha") as! String
+        datahoraenvio = coder.decodeObject(forKey: "datahoraenvio") as! String
     }
 }
