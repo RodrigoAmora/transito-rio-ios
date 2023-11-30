@@ -64,11 +64,11 @@ class OnibusViewController: UIViewController {
     
     private func populateMapView(listaOnibus: [Onibus]) {
         for onibus in self.listaOnibus {
-            let latitude = Double(onibus.latitude)
-            let longitude = Double(onibus.longitude)
+            let latitude = Double(onibus.latitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
+            let longitude = Double(onibus.longitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
             
             let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2D(latitude: latitude ?? 0.0, longitude: longitude ?? 0.0)
+            annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             annotation.title = onibus.ordem
             
             self.onibusMapView.addAnnotation(annotation)
