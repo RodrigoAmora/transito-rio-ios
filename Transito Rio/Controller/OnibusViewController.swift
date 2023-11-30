@@ -24,17 +24,21 @@ class OnibusViewController: UIViewController {
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configurarDelegates()
         self.atualizarLocalizacao()
     }
     
     // MARK: - Methods
+    private func configurarDelegates() {
+        self.onibusMapView.delegate = self
+    }
+    
     private func centralizarMapView() {
         let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
         //let region = MKCoordinateRegion(center: coordinates, span: span)
         let region = MKCoordinateRegion( center: coordinates, latitudinalMeters: CLLocationDistance(exactly: 1500)!, longitudinalMeters: CLLocationDistance(exactly: 1500)!)
         
-        self.onibusMapView.delegate = self
         self.onibusMapView.setRegion(region, animated: true)
         self.onibusMapView.showsUserLocation = true
     }
