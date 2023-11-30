@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnibusViewController" customModule="Transito_Rio" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="WKG-UD-RIB" id="vuj-lt-GYS"/>
                 <outlet property="onibusMapView" destination="uuU-8f-yeF" id="NP1-7L-Sst"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
