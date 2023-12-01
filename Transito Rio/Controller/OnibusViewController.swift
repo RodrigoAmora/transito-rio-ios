@@ -71,7 +71,7 @@ class OnibusViewController: UIViewController {
             
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-            annotation.title = onibus.ordem
+            annotation.title = "Carro: \(onibus.ordem) - Linha: \(onibus.linha)"
             
             self.onibusMapView.addAnnotation(annotation)
         }
