@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class OnibusViewController: UIViewController {
+class OnibusViewController: BaseViewController {
 
     // MARK: - @IBOutlets
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
