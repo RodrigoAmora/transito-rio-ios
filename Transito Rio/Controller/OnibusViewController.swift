@@ -132,6 +132,7 @@ extension OnibusViewController: OnibusDelegate {
     
     func showError() {
         self.activityIndicatorView.hideActivityIndicatorView()
+        self.showAlert(title: "", message: "Não foi possível buscar os ônibus!")
     }
 }
 
