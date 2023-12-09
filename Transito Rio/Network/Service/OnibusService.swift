@@ -19,27 +19,26 @@ class OnibusService {
         AF.request("\(baseURL)?dataInicial\(dateFormated)",
                     method: .get,
                     encoding: URLEncoding.default)
-        .responseJSON{ response in
-            switch response.result {
-                case .success(_):
-                    do {
-                        guard let data = response.data else { return }
-                        
-                        let listaOnibus = try JSONDecoder().decode([Onibus].self, from: data)
-                        
-                        print("Total de onibus: \(listaOnibus.count)")
-                        completion(listaOnibus)
-                    } catch {
-                        print("Error retriving questions \(error)")
+            .responseJSON{ response in
+                switch response.result {
+                    case .success(_):
+                        do {
+                            guard let data = response.data else { return }
+                            
+                            let listaOnibus = try JSONDecoder().decode([Onibus].self, from: data)
+                            completion(listaOnibus)
+                        } catch {
+                            print("Error retriving questions \(error)")
+                            completion([])
+                        }
+                        break
+                            
+                    case .failure(let error):
+                        print(error.localizedDescription)
                         completion([])
-                    }
-                    break
-                        
-                case .failure(let error):
-                    print(error.localizedDescription)
-                    completion([])
-                    break
+                        break
                 }
             }
     }
+    
 }
