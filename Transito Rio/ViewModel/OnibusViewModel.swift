@@ -22,7 +22,6 @@ class OnibusViewModel {
     func buscarOnibus() {
         self.onibusRepository.buscarOnibus(completion: { [weak self] resource in
             let listaOnibus = resource.result ?? []
-            let errorCode = resource.errorCode
             
             if listaOnibus != nil {
                 self?.onibusDelegate.populateMap(listaOnibus: listaOnibus)

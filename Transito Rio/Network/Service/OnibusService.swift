@@ -10,7 +10,7 @@ import Alamofire
 
 class OnibusService {
     
-    func buscarOnibus(completion: @escaping(_ listaOnibus: [Onibus], _ error: Int?) -> Void) {
+    func buscarOnibus(completion: @escaping(_ listaOnibus: [Onibus]) -> Void) {
         let dateFormated = DateFormatter().capturarDataHoraAtual()
         
         let baseURL = "https://dados.mobilidade.rio/gps/sppo"
@@ -19,32 +19,27 @@ class OnibusService {
         AF.request("\(baseURL)?dataInicial\(dateFormated)",
                     method: .get,
                     encoding: URLEncoding.default)
-                    .responseJSON{ response in
-                        switch response.result {
-                            case .success(let json):
-                                let statusCode = response.response?.statusCode
-                                switch statusCode {
-                                    case 200:
-                                        do {
-                                            guard let data = response.data else { return }
-                                            
-                                            let listaOnibus = try JSONDecoder().decode([Onibus].self, from: data)
-                                            completion(listaOnibus, nil)
-                                        } catch {
-                                            print("Error retriving questions \(error)")
-                                            completion([], nil)
-                                        }
-                                        break
-                                    
-                                    default:
-                                        completion([], statusCode)
-                                        break
-                                }
-                            
-                            case .failure(let error):
-                                completion([], error.responseCode)
-                                break
-                        }
+        .responseJSON{ response in
+            switch response.result {
+                case .success(_):
+                    do {
+                        guard let data = response.data else { return }
+                        
+                        let listaOnibus = try JSONDecoder().decode([Onibus].self, from: data)
+                        
+                        print("Total de onibus: \(listaOnibus.count)")
+                        completion(listaOnibus)
+                    } catch {
+                        print("Error retriving questions \(error)")
+                        completion([])
                     }
+                    break
+                        
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    completion([])
+                    break
+                }
+            }
     }
 }

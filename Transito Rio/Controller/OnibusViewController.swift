@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import UIKit
 import MapKit
 import CoreLocation
 
@@ -50,6 +49,12 @@ class OnibusViewController: BaseViewController {
         self.onibusViewModel.buscarOnibus()
     }
     
+    private func limparMapa() {
+        if self.onibusMapView.annotations.count > 0 {
+            self.onibusMapView.removeAnnotations(self.onibusMapView.annotations)
+        }
+    }
+    
     private func atualizarLocalizacao() {
         // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
@@ -74,6 +79,12 @@ class OnibusViewController: BaseViewController {
             annotation.title = "Carro: \(onibus.ordem) - Linha: \(onibus.linha)"
             
             self.onibusMapView.addAnnotation(annotation)
+        }
+    }
+    
+    private func agendarPoximaBusca() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+            self.buscarOnibus()
         }
     }
 }
@@ -123,9 +134,11 @@ extension OnibusViewController: MKMapViewDelegate {
 // MARK: - OnibusDelegate
 extension OnibusViewController: OnibusDelegate {
     func populateMap(listaOnibus: [Onibus]) {
-        self.listaOnibus = listaOnibus
         self.activityIndicatorView.hideActivityIndicatorView()
+        self.listaOnibus = listaOnibus
+        self.limparMapa()
         self.populateMapView(listaOnibus: listaOnibus)
+        self.agendarPoximaBusca()
     }
     
     func replaceAll(listaOnibus: [Onibus]) {}
