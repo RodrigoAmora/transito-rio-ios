@@ -76,7 +76,7 @@ class OnibusViewController: BaseViewController {
             
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-            annotation.title = "Carro: \(onibus.ordem) - Linha: \(onibus.linha)"
+            annotation.title = "\(String(localized: "numero_carro")) \(onibus.ordem) - \(String(localized: "linha_carro")) \(onibus.linha)"
             
             self.onibusMapView.addAnnotation(annotation)
         }
@@ -145,7 +145,7 @@ extension OnibusViewController: OnibusDelegate {
     
     func showError() {
         self.activityIndicatorView.hideActivityIndicatorView()
-        self.showAlert(title: "", message: "Não foi possível buscar os ônibus!")
+        self.showAlert(title: "", message: String(localized: "sem_onibus"))
     }
 }
 

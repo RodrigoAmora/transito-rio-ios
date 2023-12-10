@@ -10,6 +10,7 @@
 		364E4FF8568D15A292540B20 /* Pods_Transito_Rio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6852E76C3779EFE5F12BD9C9 /* Pods_Transito_Rio.framework */; };
 		4E65F57C35073447E1F88820 /* Pods_Transito_Rio_Transito_RioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75038BBC5AE5E056279CB3FF /* Pods_Transito_Rio_Transito_RioUITests.framework */; };
 		B78FED50D1D8D5A2AD4AAD90 /* Pods_Transito_RioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777DFBBC3A555EDA93E4EBCC /* Pods_Transito_RioTests.framework */; };
+		D21DCA012B243EC50016240E /* OnibusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DCA002B243EC50016240E /* OnibusResponse.swift */; };
 		D23033B12B17E3130017F60A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033B02B17E3130017F60A /* AppDelegate.swift */; };
 		D23033B32B17E3130017F60A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033B22B17E3130017F60A /* SceneDelegate.swift */; };
 		D23033B52B17E3130017F60A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033B42B17E3130017F60A /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 		D23033EB2B17E7D80017F60A /* Onibus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033EA2B17E7D80017F60A /* Onibus.swift */; };
 		D23033EF2B17EA810017F60A /* OnibusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033EE2B17EA810017F60A /* OnibusService.swift */; };
 		D234A2A82B1D9CF000D488DE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D234A2A72B1D9CF000D488DE /* BaseViewController.swift */; };
+		D251A0912B25940E00799865 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D251A0932B25940E00799865 /* Localizable.strings */; };
 		D26572202B1859C7002C7BDC /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D265721F2B1859C7002C7BDC /* Resource.swift */; };
 		D26572232B186603002C7BDC /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26572222B186603002C7BDC /* DateFormatterExtension.swift */; };
 		D26572252B186A52002C7BDC /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26572242B186A52002C7BDC /* UIActivityIndicatorView.swift */; };
@@ -58,6 +60,7 @@
 		777DFBBC3A555EDA93E4EBCC /* Pods_Transito_RioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transito_RioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B34BA0B1B54FC87B62559444 /* Pods-Transito Rio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transito Rio.release.xcconfig"; path = "Target Support Files/Pods-Transito Rio/Pods-Transito Rio.release.xcconfig"; sourceTree = "<group>"; };
 		BD735E386C5B021D4B8D9F06 /* Pods-Transito Rio-Transito RioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transito Rio-Transito RioUITests.debug.xcconfig"; path = "Target Support Files/Pods-Transito Rio-Transito RioUITests/Pods-Transito Rio-Transito RioUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D21DCA002B243EC50016240E /* OnibusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnibusResponse.swift; sourceTree = "<group>"; };
 		D23033AD2B17E3130017F60A /* Transito Rio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Transito Rio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23033B02B17E3130017F60A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D23033B22B17E3130017F60A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +80,8 @@
 		D23033EA2B17E7D80017F60A /* Onibus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onibus.swift; sourceTree = "<group>"; };
 		D23033EE2B17EA810017F60A /* OnibusService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnibusService.swift; sourceTree = "<group>"; };
 		D234A2A72B1D9CF000D488DE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D251A0922B25940E00799865 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D251A0942B25942000799865 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D265721F2B1859C7002C7BDC /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		D26572222B186603002C7BDC /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		D26572242B186A52002C7BDC /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
@@ -138,6 +143,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D21DC9FF2B243EB00016240E /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				D21DCA002B243EC50016240E /* OnibusResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		D23033A42B17E3120017F60A = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +182,7 @@
 				D29003602B183FC700A91975 /* Delegate */,
 				D26572212B1865E1002C7BDC /* Extension */,
 				D23033C12B17E3130017F60A /* Info.plist */,
+				D251A0932B25940E00799865 /* Localizable.strings */,
 				D23033EC2B17EA5D0017F60A /* Model */,
 				D265721E2B1859B0002C7BDC /* Network */,
 				D29003632B18407300A91975 /* Repository */,
@@ -244,6 +258,7 @@
 		D265721E2B1859B0002C7BDC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D21DC9FF2B243EB00016240E /* Response */,
 				D23033ED2B17EA680017F60A /* Service */,
 				D265721F2B1859C7002C7BDC /* Resource.swift */,
 			);
@@ -374,6 +389,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = D23033A42B17E3120017F60A;
 			productRefGroup = D23033AE2B17E3130017F60A /* Products */;
@@ -392,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D251A0912B25940E00799865 /* Localizable.strings in Resources */,
 				D23033E92B17E5AD0017F60A /* OnibusViewController.xib in Resources */,
 				D23033C02B17E3130017F60A /* LaunchScreen.storyboard in Resources */,
 				D23033BD2B17E3130017F60A /* Assets.xcassets in Resources */,
@@ -527,6 +544,7 @@
 				D23033B52B17E3130017F60A /* ViewController.swift in Sources */,
 				D26572232B186603002C7BDC /* DateFormatterExtension.swift in Sources */,
 				D23033B12B17E3130017F60A /* AppDelegate.swift in Sources */,
+				D21DCA012B243EC50016240E /* OnibusResponse.swift in Sources */,
 				D26572202B1859C7002C7BDC /* Resource.swift in Sources */,
 				D234A2A82B1D9CF000D488DE /* BaseViewController.swift in Sources */,
 				D26572252B186A52002C7BDC /* UIActivityIndicatorView.swift in Sources */,
@@ -589,6 +607,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		D251A0932B25940E00799865 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D251A0922B25940E00799865 /* en */,
+				D251A0942B25942000799865 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -597,6 +624,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -660,6 +688,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

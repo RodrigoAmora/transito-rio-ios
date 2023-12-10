@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Transito Rio
+
+  Created by Rodrigo Amora on 10/12/23.
+  
+*/
+"sem_onibus" = "Couldn't was possible search the bus!";
+
+"numero_carro" = "No. Car:";
+"linha_carro" = "Line";
