@@ -7,6 +7,7 @@ target 'Transito Rio' do
 
   # Pods for Transito Rio
   pod 'Alamofire', '~> 5.7.1'
+  pod 'Sheeeeeeeeet'
   
   target 'Transito RioTests' do
     inherit! :search_paths

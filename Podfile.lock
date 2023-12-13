@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (5.7.1)
+  - Sheeeeeeeeet (3.2.3)
 
 DEPENDENCIES:
   - Alamofire (~> 5.7.1)
+  - Sheeeeeeeeet
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Sheeeeeeeeet
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  Sheeeeeeeeet: 22c261f4f194f0148f14cd8b5f74babee09af4c1
 
-PODFILE CHECKSUM: e3f12f477dfb953685eb8b8632955f99737921e3
+PODFILE CHECKSUM: 244f51185c4a36b277a86fbb685e21943d2d526b
 
 COCOAPODS: 1.12.1
