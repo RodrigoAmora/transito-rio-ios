@@ -5,6 +5,13 @@
   Created by Rodrigo Amora on 10/12/23.
   
 */
+"app_name" = "Transit Rio";
+
+// MENU
+"menu_about" = "About";
+
+
+// OnibusViewController
 "sem_onibus" = "Couldn't was possible search the bus!";
 
 "numero_carro" = "No. Car:";
