@@ -13,6 +13,8 @@ class OnibusViewController: BaseViewController {
 
     // MARK: - @IBOutlets
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var btnAllocationType: UIBarButtonItem!
+    @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var onibusMapView: MKMapView!
     
     // MARK: - Atributes
@@ -25,6 +27,7 @@ class OnibusViewController: BaseViewController {
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configurarNavBar()
         self.configurarDelegates()
         self.atualizarLocalizacao()
     }
@@ -32,6 +35,17 @@ class OnibusViewController: BaseViewController {
     // MARK: - Methods
     private func configurarDelegates() {
         self.onibusMapView.delegate = self
+    }
+    
+    private func configurarNavBar() {
+        let menuSobre = UIAction(title: String(localized: "menu_about"), image: UIImage(systemName: "info.circle")) { _ in
+            print("AAAAAA")
+        }
+        
+        self.btnAllocationType.image = UIImage(systemName: "text.justify")
+        self.btnAllocationType.menu = UIMenu(title: "", children: [menuSobre])
+        
+        self.navBar.topItem?.title = String(localized: "app_name")
     }
     
     private func centralizarMapView() {

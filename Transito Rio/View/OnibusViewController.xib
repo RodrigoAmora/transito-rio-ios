@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnibusViewController" customModule="Transito_Rio" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicatorView" destination="WKG-UD-RIB" id="vuj-lt-GYS"/>
+                <outlet property="btnAllocationType" destination="paj-Ow-HYv" id="Qsc-eT-zVc"/>
+                <outlet property="navBar" destination="RNF-VX-EVR" id="AjP-M6-Nk9"/>
                 <outlet property="onibusMapView" destination="uuU-8f-yeF" id="NP1-7L-Sst"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,6 +33,15 @@
                     <rect key="frame" x="171" y="423" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                 </activityIndicatorView>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RNF-VX-EVR">
+                    <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="Title" id="UIT-Ni-46v">
+                            <barButtonItem key="rightBarButtonItem" title="Item" id="paj-Ow-HYv"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
