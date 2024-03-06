@@ -33,6 +33,11 @@ class OnibusViewController: BaseViewController {
     }
     
     // MARK: - Methods
+    private func buscarOnibus() {
+        self.activityIndicatorView.configureActivityIndicatorView()
+        self.onibusViewModel.buscarOnibus()
+    }
+    
     private func configurarDelegates() {
         self.onibusMapView.delegate = self
     }
@@ -58,9 +63,25 @@ class OnibusViewController: BaseViewController {
         self.onibusMapView.showsUserLocation = true
     }
     
-    private func buscarOnibus() {
-        self.activityIndicatorView.configureActivityIndicatorView()
-        self.onibusViewModel.buscarOnibus()
+    private func centralizarMapView(listaOnibus: [Onibus]) {
+        var coordinates: CLLocationCoordinate2D
+        var region: MKCoordinateRegion
+        
+        if (listaOnibus.isEmpty) {
+            coordinates = CLLocationCoordinate2D(latitude: -22.8968093, longitude: -43.1833839)
+            region = MKCoordinateRegion( center: coordinates, latitudinalMeters: CLLocationDistance(exactly: 1500)!, longitudinalMeters: CLLocationDistance(exactly: 1500)!)
+        } else {
+            coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            
+            //let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+            //region = MKCoordinateRegion(center: coordinates, span: span)
+            
+            region = MKCoordinateRegion( center: coordinates, latitudinalMeters: CLLocationDistance(exactly: 1500)!, longitudinalMeters: CLLocationDistance(exactly: 1500)!)
+            
+            self.onibusMapView.showsUserLocation = true
+        }
+        
+        self.onibusMapView.setRegion(region, animated: true)
     }
     
     private func limparMapa() {
@@ -84,7 +105,7 @@ class OnibusViewController: BaseViewController {
     }
     
     private func populateMapView(listaOnibus: [Onibus]) {
-        for onibus in self.listaOnibus {
+        for onibus in listaOnibus {
             let latitude = Double(onibus.latitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
             let longitude = Double(onibus.longitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
             
@@ -94,6 +115,26 @@ class OnibusViewController: BaseViewController {
             
             self.onibusMapView.addAnnotation(annotation)
         }
+    }
+    
+    private func verificarSeHaOnibusProximos() {
+        let localizacaoAtual = CLLocation(latitude: self.latitude, longitude: self.longitude)
+        
+        var onibusProximos: [Onibus] = []
+        for onibus in self.listaOnibus {
+            let onibusLatitude = Double(onibus.latitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
+            let onibusLongitude = Double(onibus.longitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
+            
+            let localizacaoOnibus = CLLocation(latitude: onibusLatitude, longitude: onibusLongitude)
+            
+            let distancia = localizacaoAtual.distance(from: localizacaoOnibus)
+            
+            if (distancia.isLessThanOrEqualTo(3000)) {
+                onibusProximos.append(onibus)
+            }
+        }
+        
+        self.centralizarMapView(listaOnibus: onibusProximos)
     }
     
     private func agendarPoximaBusca() {
@@ -151,6 +192,7 @@ extension OnibusViewController: OnibusDelegate {
         self.activityIndicatorView.hideActivityIndicatorView()
         self.listaOnibus = listaOnibus
         self.limparMapa()
+        self.verificarSeHaOnibusProximos()
         self.populateMapView(listaOnibus: listaOnibus)
         self.agendarPoximaBusca()
     }
