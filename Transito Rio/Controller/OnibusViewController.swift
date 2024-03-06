@@ -104,7 +104,7 @@ class OnibusViewController: BaseViewController {
         }
     }
     
-    private func populateMapView(listaOnibus: [Onibus]) {
+    private func popularMapView(listaOnibus: [Onibus]) {
         for onibus in listaOnibus {
             let latitude = Double(onibus.latitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
             let longitude = Double(onibus.longitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
@@ -193,7 +193,7 @@ extension OnibusViewController: OnibusDelegate {
         self.listaOnibus = listaOnibus
         self.limparMapa()
         self.verificarSeHaOnibusProximos()
-        self.populateMapView(listaOnibus: listaOnibus)
+        self.popularMapView(listaOnibus: listaOnibus)
         self.agendarPoximaBusca()
     }
     
