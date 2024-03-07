@@ -8,7 +8,6 @@
 import Foundation
 
 protocol OnibusDelegate {
-    func populateMap(listaOnibus: [Onibus])
     func replaceAll(listaOnibus: [Onibus])
     func showError()
 }
