@@ -13,7 +13,7 @@ class OnibusViewController: BaseViewController {
 
     // MARK: - @IBOutlets
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-    @IBOutlet weak var btnAllocationType: UIBarButtonItem!
+    @IBOutlet weak var btnMenuItem: UIBarButtonItem!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var onibusMapView: MKMapView!
     
@@ -27,9 +27,9 @@ class OnibusViewController: BaseViewController {
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.configurarNavBar()
-        self.configurarDelegates()
         self.atualizarLocalizacao()
+        self.configurarDelegates()
+        self.configurarNavBar()
     }
     
     // MARK: - Methods
@@ -43,12 +43,12 @@ class OnibusViewController: BaseViewController {
     }
     
     private func configurarNavBar() {
-        let menuSobre = UIAction(title: String(localized: "menu_about"), image: UIImage(systemName: "info.circle")) { _ in
-            print("AAAAAA")
+        let menuSobre = UIAction(title: String(localized: "menu_about"), image: UIImage(systemName: "info.circle"), attributes: [], state: .off) { _ in
+            print("AAAAA")
         }
         
-        self.btnAllocationType.image = UIImage(systemName: "text.justify")
-        self.btnAllocationType.menu = UIMenu(title: "", children: [menuSobre])
+        self.btnMenuItem.image = UIImage(systemName: "text.justify")
+        self.btnMenuItem.menu = UIMenu(title: "", children: [menuSobre, menuSobre])
         
         self.navBar.topItem?.title = String(localized: "app_name")
     }
@@ -68,7 +68,9 @@ class OnibusViewController: BaseViewController {
         var region: MKCoordinateRegion
         
         if (listaOnibus.isEmpty) {
-            coordinates = CLLocationCoordinate2D(latitude: -22.8968093, longitude: -43.1833839)
+            let rioDeJaneiroLatitude = -22.8968093
+            let rioDeJaneiroLongitude = -43.1833839
+            coordinates = CLLocationCoordinate2D(latitude: rioDeJaneiroLatitude, longitude: rioDeJaneiroLongitude)
             region = MKCoordinateRegion( center: coordinates, latitudinalMeters: CLLocationDistance(exactly: 1500)!, longitudinalMeters: CLLocationDistance(exactly: 1500)!)
         } else {
             coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
@@ -188,7 +190,7 @@ extension OnibusViewController: MKMapViewDelegate {
 
 // MARK: - OnibusDelegate
 extension OnibusViewController: OnibusDelegate {
-    func populateMap(listaOnibus: [Onibus]) {
+    func replaceAll(listaOnibus: [Onibus]) {
         self.activityIndicatorView.hideActivityIndicatorView()
         self.listaOnibus = listaOnibus
         self.limparMapa()
@@ -197,11 +199,9 @@ extension OnibusViewController: OnibusDelegate {
         self.agendarPoximaBusca()
     }
     
-    func replaceAll(listaOnibus: [Onibus]) {}
-    
     func showError() {
         self.activityIndicatorView.hideActivityIndicatorView()
         self.showAlert(title: "", message: String(localized: "sem_onibus"))
+        self.agendarPoximaBusca()
     }
 }
-

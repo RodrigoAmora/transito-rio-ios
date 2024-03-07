@@ -22,12 +22,7 @@ class OnibusViewModel {
     func buscarOnibus() {
         self.onibusRepository.buscarOnibus(completion: { [weak self] resource in
             let listaOnibus = resource.result ?? []
-            
-            if listaOnibus != nil {
-                self?.onibusDelegate.populateMap(listaOnibus: listaOnibus)
-            } else {
-                self?.onibusDelegate.showError()
-            }
+            self?.onibusDelegate.replaceAll(listaOnibus: listaOnibus)
         })
     }
 }
