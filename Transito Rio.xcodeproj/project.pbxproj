@@ -11,6 +11,8 @@
 		4E65F57C35073447E1F88820 /* Pods_Transito_Rio_Transito_RioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75038BBC5AE5E056279CB3FF /* Pods_Transito_Rio_Transito_RioUITests.framework */; };
 		B78FED50D1D8D5A2AD4AAD90 /* Pods_Transito_RioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777DFBBC3A555EDA93E4EBCC /* Pods_Transito_RioTests.framework */; };
 		D21DCA012B243EC50016240E /* OnibusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DCA002B243EC50016240E /* OnibusResponse.swift */; };
+		D229167D2B9A09EF00505143 /* SobreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D229167B2B9A09EF00505143 /* SobreViewController.swift */; };
+		D229167E2B9A09EF00505143 /* SobreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D229167C2B9A09EF00505143 /* SobreViewController.xib */; };
 		D23033B12B17E3130017F60A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033B02B17E3130017F60A /* AppDelegate.swift */; };
 		D23033B32B17E3130017F60A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033B22B17E3130017F60A /* SceneDelegate.swift */; };
 		D23033B52B17E3130017F60A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033B42B17E3130017F60A /* ViewController.swift */; };
@@ -61,6 +63,8 @@
 		B34BA0B1B54FC87B62559444 /* Pods-Transito Rio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transito Rio.release.xcconfig"; path = "Target Support Files/Pods-Transito Rio/Pods-Transito Rio.release.xcconfig"; sourceTree = "<group>"; };
 		BD735E386C5B021D4B8D9F06 /* Pods-Transito Rio-Transito RioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transito Rio-Transito RioUITests.debug.xcconfig"; path = "Target Support Files/Pods-Transito Rio-Transito RioUITests/Pods-Transito Rio-Transito RioUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D21DCA002B243EC50016240E /* OnibusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnibusResponse.swift; sourceTree = "<group>"; };
+		D229167B2B9A09EF00505143 /* SobreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreViewController.swift; sourceTree = "<group>"; };
+		D229167C2B9A09EF00505143 /* SobreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SobreViewController.xib; sourceTree = "<group>"; };
 		D23033AD2B17E3130017F60A /* Transito Rio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Transito Rio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23033B02B17E3130017F60A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D23033B22B17E3130017F60A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +229,8 @@
 				D234A2A72B1D9CF000D488DE /* BaseViewController.swift */,
 				D23033E62B17E5AD0017F60A /* OnibusViewController.swift */,
 				D23033B42B17E3130017F60A /* ViewController.swift */,
+				D229167B2B9A09EF00505143 /* SobreViewController.swift */,
+				D229167C2B9A09EF00505143 /* SobreViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -410,6 +416,7 @@
 			files = (
 				D251A0912B25940E00799865 /* Localizable.strings in Resources */,
 				D23033E92B17E5AD0017F60A /* OnibusViewController.xib in Resources */,
+				D229167E2B9A09EF00505143 /* SobreViewController.xib in Resources */,
 				D23033C02B17E3130017F60A /* LaunchScreen.storyboard in Resources */,
 				D23033BD2B17E3130017F60A /* Assets.xcassets in Resources */,
 				D23033B82B17E3130017F60A /* Main.storyboard in Resources */,
@@ -554,6 +561,7 @@
 				D29003622B183FE400A91975 /* OnibusDelegate.swift in Sources */,
 				D23033B32B17E3130017F60A /* SceneDelegate.swift in Sources */,
 				D23033EF2B17EA810017F60A /* OnibusService.swift in Sources */,
+				D229167D2B9A09EF00505143 /* SobreViewController.swift in Sources */,
 				D29003652B18408400A91975 /* OnibusRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
