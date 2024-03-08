@@ -2,8 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>This app needs to access the location of your device to monitor the buses from Rio de Janeiro.</string>
+    
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>This app needs to access the location of your device.</string>
+    <string>This app needs to access the location of your device to monitor the buses from Rio de Janeiro.</string>
+    
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>This app needs to access the location of your device to monitor the buses from Rio de Janeiro.</string>
+    
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
