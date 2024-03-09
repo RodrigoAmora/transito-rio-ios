@@ -228,9 +228,8 @@
 			children = (
 				D234A2A72B1D9CF000D488DE /* BaseViewController.swift */,
 				D23033E62B17E5AD0017F60A /* OnibusViewController.swift */,
-				D23033B42B17E3130017F60A /* ViewController.swift */,
 				D229167B2B9A09EF00505143 /* SobreViewController.swift */,
-				D229167C2B9A09EF00505143 /* SobreViewController.xib */,
+				D23033B42B17E3130017F60A /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -241,6 +240,7 @@
 				D23033BE2B17E3130017F60A /* LaunchScreen.storyboard */,
 				D23033B62B17E3130017F60A /* Main.storyboard */,
 				D23033E72B17E5AD0017F60A /* OnibusViewController.xib */,
+				D229167C2B9A09EF00505143 /* SobreViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
