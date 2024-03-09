@@ -30,6 +30,7 @@ class OnibusViewController: BaseViewController {
         self.atualizarLocalizacao()
         self.configurarDelegates()
         self.configurarNavBar()
+//        self.configurarTabBar()
     }
     
     // MARK: - Methods
@@ -43,15 +44,27 @@ class OnibusViewController: BaseViewController {
     }
     
     private func configurarNavBar() {
-        let menuSobre = UIAction(title: String(localized: "menu_about"), image: UIImage(systemName: "info.circle"), attributes: [], state: .off) { _ in
+        let menuSobre = UIAction(title: String(localized: "menu_about"), image: UIImage(systemName: "info.circle")) { _ in
             print("AAAAA")
         }
         
         self.btnMenuItem.image = UIImage(systemName: "text.justify")
-        self.btnMenuItem.menu = UIMenu(title: "", children: [menuSobre, menuSobre])
+        self.btnMenuItem.menu = UIMenu(title: "", children: [menuSobre])
         
         self.navBar.topItem?.title = String(localized: "app_name")
     }
+    
+//    private func configurarTabBar() {
+//        let onibusTabBarItem: UITabBarItem = UITabBarItem(title: String(localized: "tab_bar_onibus"), image: UIImage(systemName: "bus.fill"), tag: 0)
+//        
+//        let sobreTabBarItem: UITabBarItem = UITabBarItem(title: String(localized: "tab_bar_sobre"), image: UIImage(systemName: "info.circle"), tag: 1)
+//        
+////        let sobreViewController = SobreViewController()
+////        sobreViewController.tabBarItem = sobreTabBarItem
+//        
+//        self.tabBar.isTranslucent = false
+//        self.tabBar.items = [onibusTabBarItem, sobreTabBarItem]
+//    }
     
     private func centralizarMapView() {
         let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
@@ -201,7 +214,7 @@ extension OnibusViewController: OnibusDelegate {
     
     func showError() {
         self.activityIndicatorView.hideActivityIndicatorView()
-        self.showAlert(title: "", message: String(localized: "sem_onibus"))
+        //self.showAlert(title: "", message: String(localized: "sem_onibus"))
         self.agendarPoximaBusca()
     }
 }
