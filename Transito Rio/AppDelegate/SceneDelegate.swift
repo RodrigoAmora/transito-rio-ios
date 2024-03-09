@@ -18,7 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        changeViewController(viewController: OnibusViewController(), scene: scene)
+        //changeViewController(viewController: OnibusViewController(), scene: scene)
+        self.createUITabBarItem(selectedIndex: 0)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -58,6 +59,42 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
         window?.rootViewController = UINavigationController(rootViewController: viewController)
+        window?.makeKeyAndVisible()
+    }
+    
+    private func createUITabBarItem(selectedIndex: Int) {
+        let onibusTabBarItem: UITabBarItem = UITabBarItem(title: String(localized: "tab_bar_onibus"), image: UIImage(systemName: "bus.fill"), tag: 0)
+        let sobreTabBarItem: UITabBarItem = UITabBarItem(title: String(localized: "tab_bar_sobre"), image: UIImage(systemName: "info.circle"), tag: 1)
+        
+        let onibusViewController = OnibusViewController()
+        onibusViewController.tabBarItem = onibusTabBarItem
+        
+        let sobreViewController = SobreViewController()
+        sobreViewController.tabBarItem = sobreTabBarItem
+        
+        let tabBarController = UITabBarController()
+        tabBarController.tabBar.backgroundColor = .gray
+        tabBarController.viewControllers = [onibusViewController, sobreViewController]
+        
+        switch(selectedIndex) {
+            case 0:
+                tabBarController.selectedViewController = onibusViewController
+                break
+
+            case 1:
+                tabBarController.selectedViewController = sobreViewController
+                break
+
+            default:
+                tabBarController.selectedViewController = onibusViewController
+                break
+        }
+        
+        
+        let navigationController = UINavigationController(rootViewController: tabBarController)
+        navigationController.navigationBar.isHidden = true
+        
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 }
