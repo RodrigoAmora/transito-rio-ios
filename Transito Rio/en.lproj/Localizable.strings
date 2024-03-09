@@ -10,9 +10,17 @@
 // MENU
 "menu_about" = "About";
 
+// TabBarItem
+"tab_bar_onibus" = "Bus";
+"tab_bar_sobre" = "About";
 
 // OnibusViewController
 "sem_onibus" = "Couldn't was possible search the bus!";
 
 "numero_carro" = "No. Car:";
 "linha_carro" = "Line";
+
+// SobreViewController
+"created_by" = "Criado por Rodrigo Amora";
+"created_by_email" = "E-mail: rodrigo.amora.freitas@gmail.com";
+"created_by_version" = "Versão:";

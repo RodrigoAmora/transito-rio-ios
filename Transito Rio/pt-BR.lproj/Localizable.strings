@@ -10,9 +10,17 @@
 // MENU
 "menu_sobre" = "Sobre";
 
+// TabBarItem
+"tab_bar_onibus" = "Ônibus";
+"tab_bar_sobre" = "Sobre";
 
 // OnibusViewController
 "sem_onibus" = "Não foi possível buscar os ônibus!";
 
 "numero_carro" = "Nº Carro:";
 "linha_carro" = "Linha:";
+
+// SobreViewController
+"created_by" = "Criado por Rodrigo Amora";
+"created_by_email" = "E-mail: rodrigo.amora.freitas@gmail.com";
+"created_by_version" = "Versão:";
