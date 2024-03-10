@@ -760,7 +760,8 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Transito Rio/Info.plist";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs to access the location of your device.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app needs to access the location to serach nearby buses.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs to access the location to serach nearby buses.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -796,7 +797,8 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Transito Rio/Info.plist";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs to access the location of your device.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app needs to access the location to serach nearby buses.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs to access the location to serach nearby buses.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
