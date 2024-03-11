@@ -12,3 +12,6 @@ O App usa as seguintes dependências:
 * Sheeeeeeeeet
 
 <hr>
+
+Disponível na App Store: <br>
+https://apps.apple.com/us/app/tr%C3%A2nsito-rio/id6476945560
