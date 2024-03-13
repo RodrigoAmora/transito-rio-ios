@@ -14,7 +14,7 @@ class OnibusService {
         let dateFormated = DateFormatter().capturarDataHoraAtual()
         
         let baseURL = "https://dados.mobilidade.rio/gps/sppo"
-        let onibusURL = "\(baseURL)?dataInicial\(dateFormated)"
+        let onibusURL = "\(baseURL)?dataInicial=\(dateFormated)"
         
         AF.request(onibusURL,
                     method: .get,
