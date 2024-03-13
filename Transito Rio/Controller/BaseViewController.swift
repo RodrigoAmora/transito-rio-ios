@@ -10,6 +10,9 @@ import UIKit
 
 
 class BaseViewController: UIViewController {
+    func changeViewControllerWithPresent(_ destinationViewController: UIViewController) {
+        self.present(destinationViewController, animated: true)
+    }
     
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title,
