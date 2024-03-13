@@ -8,7 +8,7 @@
 "app_name" = "Transit Rio";
 
 // MENU
-"menu_about" = "About";
+"menu_sobre" = "About";
 
 // TabBarItem
 "tab_bar_onibus" = "Bus";
