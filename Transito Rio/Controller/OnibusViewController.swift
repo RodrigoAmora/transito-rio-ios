@@ -30,7 +30,6 @@ class OnibusViewController: BaseViewController {
         self.atualizarLocalizacao()
         self.configurarDelegates()
         self.configurarNavBar()
-//        self.configurarTabBar()
     }
     
     // MARK: - Methods
@@ -44,8 +43,8 @@ class OnibusViewController: BaseViewController {
     }
     
     private func configurarNavBar() {
-        let menuSobre = UIAction(title: String(localized: "menu_about"), image: UIImage(systemName: "info.circle")) { _ in
-            print("AAAAA")
+        let menuSobre = UIAction(title: String(localized: "menu_sobre"), image: UIImage(systemName: "info.circle")) { _ in
+            //self.changeViewControllerWithPresent(SobreViewController())
         }
         
         self.btnMenuItem.image = UIImage(systemName: "text.justify")
@@ -53,18 +52,6 @@ class OnibusViewController: BaseViewController {
         
         self.navBar.topItem?.title = String(localized: "app_name")
     }
-    
-//    private func configurarTabBar() {
-//        let onibusTabBarItem: UITabBarItem = UITabBarItem(title: String(localized: "tab_bar_onibus"), image: UIImage(systemName: "bus.fill"), tag: 0)
-//        
-//        let sobreTabBarItem: UITabBarItem = UITabBarItem(title: String(localized: "tab_bar_sobre"), image: UIImage(systemName: "info.circle"), tag: 1)
-//        
-////        let sobreViewController = SobreViewController()
-////        sobreViewController.tabBarItem = sobreTabBarItem
-//        
-//        self.tabBar.isTranslucent = false
-//        self.tabBar.items = [onibusTabBarItem, sobreTabBarItem]
-//    }
     
     private func centralizarMapView() {
         let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
