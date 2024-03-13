@@ -44,7 +44,7 @@ class OnibusViewController: BaseViewController {
     
     private func configurarNavBar() {
         let menuSobre = UIAction(title: String(localized: "menu_sobre"), image: UIImage(systemName: "info.circle")) { _ in
-            //self.changeViewControllerWithPresent(SobreViewController())
+            self.changeViewControllerWithPresent(SobreViewController())
         }
         
         self.btnMenuItem.image = UIImage(systemName: "text.justify")
