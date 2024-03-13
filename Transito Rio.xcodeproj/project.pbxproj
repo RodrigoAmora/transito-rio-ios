@@ -10,7 +10,6 @@
 		364E4FF8568D15A292540B20 /* Pods_Transito_Rio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6852E76C3779EFE5F12BD9C9 /* Pods_Transito_Rio.framework */; };
 		4E65F57C35073447E1F88820 /* Pods_Transito_Rio_Transito_RioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75038BBC5AE5E056279CB3FF /* Pods_Transito_Rio_Transito_RioUITests.framework */; };
 		B78FED50D1D8D5A2AD4AAD90 /* Pods_Transito_RioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777DFBBC3A555EDA93E4EBCC /* Pods_Transito_RioTests.framework */; };
-		D21DCA012B243EC50016240E /* OnibusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DCA002B243EC50016240E /* OnibusResponse.swift */; };
 		D229167D2B9A09EF00505143 /* SobreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D229167B2B9A09EF00505143 /* SobreViewController.swift */; };
 		D229167E2B9A09EF00505143 /* SobreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D229167C2B9A09EF00505143 /* SobreViewController.xib */; };
 		D23033B12B17E3130017F60A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23033B02B17E3130017F60A /* AppDelegate.swift */; };
@@ -62,7 +61,6 @@
 		777DFBBC3A555EDA93E4EBCC /* Pods_Transito_RioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transito_RioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B34BA0B1B54FC87B62559444 /* Pods-Transito Rio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transito Rio.release.xcconfig"; path = "Target Support Files/Pods-Transito Rio/Pods-Transito Rio.release.xcconfig"; sourceTree = "<group>"; };
 		BD735E386C5B021D4B8D9F06 /* Pods-Transito Rio-Transito RioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transito Rio-Transito RioUITests.debug.xcconfig"; path = "Target Support Files/Pods-Transito Rio-Transito RioUITests/Pods-Transito Rio-Transito RioUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D21DCA002B243EC50016240E /* OnibusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnibusResponse.swift; sourceTree = "<group>"; };
 		D229167B2B9A09EF00505143 /* SobreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreViewController.swift; sourceTree = "<group>"; };
 		D229167C2B9A09EF00505143 /* SobreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SobreViewController.xib; sourceTree = "<group>"; };
 		D23033AD2B17E3130017F60A /* Transito Rio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Transito Rio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,14 +143,6 @@
 				41B244CD0266A6A5FE44EEFA /* Pods-Transito RioTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		D21DC9FF2B243EB00016240E /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				D21DCA002B243EC50016240E /* OnibusResponse.swift */,
-			);
-			path = Response;
 			sourceTree = "<group>";
 		};
 		D23033A42B17E3120017F60A = {
@@ -264,7 +254,6 @@
 		D265721E2B1859B0002C7BDC /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				D21DC9FF2B243EB00016240E /* Response */,
 				D23033ED2B17EA680017F60A /* Service */,
 				D265721F2B1859C7002C7BDC /* Resource.swift */,
 			);
@@ -551,7 +540,6 @@
 				D23033B52B17E3130017F60A /* ViewController.swift in Sources */,
 				D26572232B186603002C7BDC /* DateFormatterExtension.swift in Sources */,
 				D23033B12B17E3130017F60A /* AppDelegate.swift in Sources */,
-				D21DCA012B243EC50016240E /* OnibusResponse.swift in Sources */,
 				D26572202B1859C7002C7BDC /* Resource.swift in Sources */,
 				D234A2A82B1D9CF000D488DE /* BaseViewController.swift in Sources */,
 				D26572252B186A52002C7BDC /* UIActivityIndicatorView.swift in Sources */,
