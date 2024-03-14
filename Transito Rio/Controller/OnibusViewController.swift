@@ -73,7 +73,7 @@ class OnibusViewController: BaseViewController {
             coordinates = CLLocationCoordinate2D(latitude: rioDeJaneiroLatitude, longitude: rioDeJaneiroLongitude)
             region = MKCoordinateRegion( center: coordinates, latitudinalMeters: CLLocationDistance(exactly: 1500)!, longitudinalMeters: CLLocationDistance(exactly: 1500)!)
         } else {
-            coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            coordinates = CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
             
             //let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
             //region = MKCoordinateRegion(center: coordinates, span: span)
@@ -192,6 +192,7 @@ extension OnibusViewController: MKMapViewDelegate {
 extension OnibusViewController: OnibusDelegate {
     func replaceAll(listaOnibus: [Onibus]) {
         self.activityIndicatorView.hideActivityIndicatorView()
+        self.listaOnibus.removeAll()
         self.listaOnibus = listaOnibus
         self.limparMapa()
         self.verificarSeHaOnibusProximos()
