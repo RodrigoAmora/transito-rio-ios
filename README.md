@@ -7,6 +7,9 @@ O app roda a partir do iOS 15.0, utiliza a arquitetura MVVM e persistência de d
 
 <hr>
 
+Dependências:
+-------------
+
 O App usa as seguintes dependências:
 * Alamofire
 * Sheeeeeeeeet
