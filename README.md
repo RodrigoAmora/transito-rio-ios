@@ -3,7 +3,7 @@ Projeto que consulta a API do Data.rio para pegar a posição da frota de ônibu
 
 <br>
 
-O app roda a partir do iOS 15.0, utiliza a arquitetura MVVM e persistência de dados off-line para exibição para quando o device não estiver acesso a internet.
+O app roda a partir do iOS 15.0, utiliza a arquitetura MVVM, a API de localização do SDK e persistência de dados off-line para exibição para quando o device não estiver acesso a internet.
 
 <hr>
 
