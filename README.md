@@ -1,4 +1,6 @@
 # transito-rio-ios
+Descrição:
+----------
 Projeto que consulta a API do Data.rio para pegar a posição da frota de ônibus em circulação do Rio de Janeiro, o app amostra a posição dos ônibus nos últimos 10 segundos.
 
 <br>
