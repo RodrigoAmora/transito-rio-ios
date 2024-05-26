@@ -21,7 +21,6 @@ class OnibusViewController: BaseViewController {
     private let locationManager = CLLocationManager()
     private var latitude: Double = 0.0
     private var longitude: Double = 0.0
-    private var listaOnibus: [Onibus] = []
     private lazy var onibusViewModel: OnibusViewModel = OnibusViewModel(onibusDelegate: self)
     
     // MARK: - View life cycle
@@ -55,7 +54,9 @@ class OnibusViewController: BaseViewController {
     
     private func centralizarMapView() {
         let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+
+        //let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        
         //let region = MKCoordinateRegion(center: coordinates, span: span)
         let region = MKCoordinateRegion( center: coordinates, latitudinalMeters: CLLocationDistance(exactly: 1500)!, longitudinalMeters: CLLocationDistance(exactly: 1500)!)
         
@@ -119,11 +120,11 @@ class OnibusViewController: BaseViewController {
         }
     }
     
-    private func verificarSeHaOnibusProximos() {
+    private func verificarSeHaOnibusProximos(listaOnibus: [Onibus]) {
         let localizacaoAtual = CLLocation(latitude: self.latitude, longitude: self.longitude)
         
         var onibusProximos: [Onibus] = []
-        for onibus in self.listaOnibus {
+        for onibus in listaOnibus {
             let onibusLatitude = Double(onibus.latitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
             let onibusLongitude = Double(onibus.longitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
             
@@ -140,7 +141,8 @@ class OnibusViewController: BaseViewController {
     }
     
     private func agendarPoximaBusca() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            self.limparMapa()
             self.buscarOnibus()
         }
     }
@@ -169,7 +171,6 @@ extension OnibusViewController: CLLocationManagerDelegate {
 extension OnibusViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard annotation is MKPointAnnotation else { return nil }
-//        guard annotation is Salon else { return nil }
 
         let identifier = "Onibus"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
@@ -192,10 +193,7 @@ extension OnibusViewController: MKMapViewDelegate {
 extension OnibusViewController: OnibusDelegate {
     func replaceAll(listaOnibus: [Onibus]) {
         self.activityIndicatorView.hideActivityIndicatorView()
-        self.listaOnibus.removeAll()
-        self.listaOnibus = listaOnibus
-        self.limparMapa()
-        self.verificarSeHaOnibusProximos()
+        self.verificarSeHaOnibusProximos(listaOnibus: listaOnibus)
         self.popularMapView(listaOnibus: listaOnibus)
         self.agendarPoximaBusca()
     }
