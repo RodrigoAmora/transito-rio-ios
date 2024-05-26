@@ -9,7 +9,7 @@ import Foundation
 
 extension DateFormatter {
     func capturarDataHoraAtual() -> String {
-        self.dateFormat = "yyyy-dd-MM:HH:mm:ss"
+        self.dateFormat = "yyyy-dd-MM+HH:mm:ss"
         return self.string(from: Date())
     }
 }
