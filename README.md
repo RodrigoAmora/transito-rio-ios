@@ -2,25 +2,20 @@
 Descrição:
 ----------
 Projeto que consulta a API do Data.rio para pegar a posição da frota de ônibus em circulação do Rio de Janeiro, o app amostra a posição dos ônibus nos últimos 10 segundos.
-
-<br>
-
+<br><br>
 O app roda a partir do iOS 15.0, utiliza a arquitetura MVVM, a API de localização do SDK e persistência de dados off-line.
-
-<hr>
 
 Dependências:
 -------------
-
 O App usa as seguintes dependências:
 * Alamofire
 * Sheeeeeeeeet
 
-# Autor
+Autor:
+------
 <b>Rodrigo Amora</b>
 
-LinkedIn: https://linkedin.com/in/rodrigoamora
-
+LinkedIn: https://linkedin.com/in/rodrigoamora <br>
 E-mail: rodrigo.amora.freitas@gmail.com
 
 <hr>
