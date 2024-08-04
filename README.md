@@ -18,7 +18,7 @@ Autor:
 LinkedIn: https://linkedin.com/in/rodrigoamora <br>
 E-mail: rodrigo.amora.freitas@gmail.com
 
-<hr>
-
+Acesso ao projeto:
+------------------
 Disponível na App Store: <br>
 https://apps.apple.com/us/app/tr%C3%A2nsito-rio/id6476945560
