@@ -12,8 +12,6 @@ class OnibusViewController: BaseViewController {
 
     // MARK: - @IBOutlets
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-    @IBOutlet weak var btnMenuItem: UIBarButtonItem!
-    @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var onibusMapView: MKMapView!
     
     // MARK: - Atributes
@@ -25,9 +23,9 @@ class OnibusViewController: BaseViewController {
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configurarNavBar()
         self.atualizarLocalizacao()
         self.configurarDelegates()
-        self.configurarNavBar()
     }
     
     // MARK: - Methods
@@ -45,10 +43,13 @@ class OnibusViewController: BaseViewController {
             self.changeViewControllerWithPresent(SobreViewController())
         }
         
-        self.btnMenuItem.image = UIImage(systemName: "text.justify")
-        self.btnMenuItem.menu = UIMenu(title: "", children: [menuSobre])
+        let btnMenuItem = UIBarButtonItem()
+        btnMenuItem.image = UIImage(systemName: "text.justify")
+        btnMenuItem.menu = UIMenu(title: "", children: [menuSobre])
         
-        self.navBar.topItem?.title = String(localized: "app_name")
+        self.tabBarController?.navigationController?.navigationBar.backgroundColor = .blue
+        self.tabBarController?.navigationItem.title = String(localized: "app_name")
+        self.tabBarController?.navigationItem.rightBarButtonItem = btnMenuItem
     }
     
     private func centralizarMapView() {
