@@ -16,9 +16,8 @@ class OnibusRepository {
     // MARK: - Methods
     func buscarOnibus(completion: @escaping(_ listaOnibus: Resource<[Onibus]>) -> Void) {
         self.onibusService.buscarOnibus(completion: { listaOnibus in
-//            let novaListaOnibus = self.verificarHoraDeEnvioDaLocalizacao(listaOnibus: listaOnibus)
-//            completion(Resource(result: novaListaOnibus))
-            completion(Resource(result: listaOnibus))
+            let novaListaOnibus = self.verificarHoraDeEnvioDaLocalizacao(listaOnibus: listaOnibus)
+            completion(Resource(result: novaListaOnibus))
         })
     }
     
