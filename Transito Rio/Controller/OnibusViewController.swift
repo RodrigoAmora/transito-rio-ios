@@ -39,6 +39,18 @@ class OnibusViewController: BaseViewController {
     }
     
     private func configurarNavBar() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor.blue
+
+        let textColor = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        appearance.titleTextAttributes = textColor
+                
+        self.tabBarController?.navigationController?.navigationBar.standardAppearance = appearance
+        self.tabBarController?.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        self.tabBarController?.navigationController?.navigationBar.tintColor = .white
+        
+        
         let menuSobre = UIAction(title: String(localized: "menu_sobre"), image: UIImage(systemName: "info.circle")) { _ in
             self.changeViewControllerWithPresent(SobreViewController())
         }
@@ -47,7 +59,6 @@ class OnibusViewController: BaseViewController {
         btnMenuItem.image = UIImage(systemName: "text.justify")
         btnMenuItem.menu = UIMenu(title: "", children: [menuSobre])
         
-        self.tabBarController?.navigationController?.navigationBar.backgroundColor = .blue
         self.tabBarController?.navigationItem.title = String(localized: "app_name")
         self.tabBarController?.navigationItem.rightBarButtonItem = btnMenuItem
     }
