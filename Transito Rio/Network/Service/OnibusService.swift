@@ -19,8 +19,8 @@ class OnibusService {
         let onibusURL = "\(baseURL)?dataInicial=\(dateFormated)&dataFinal=\(dateFormated)"
         
         AF.request(onibusURL,
-                    method: .get,
-                    encoding: URLEncoding.default)
+                   method: .get,
+                   encoding: URLEncoding.default)
         .responseDecodable(of: [Onibus].self) { response in
             switch response.result {
                 case .success(_):
@@ -28,7 +28,7 @@ class OnibusService {
                         guard let data = response.data else { return }
                         
                         self.listaOnibus = try JSONDecoder().decode([Onibus].self, from: data)
-                        completion(self.verificarHoraDeEnvioDaLocalizacao())
+                        completion(self.removerOnibusRepetidos())
                     } catch {
                         print("Error retriving questions \(error)")
                         completion([])
@@ -43,25 +43,31 @@ class OnibusService {
         }
     }
     
-    private func verificarHoraDeEnvioDaLocalizacao() -> [Onibus] {
-        var novaListaOnibus: [Onibus] = []
+    private func removerOnibusRepetidos() -> [Onibus] {
+        self.listaOnibus.reverse()
         
-        for onibus in self.listaOnibus {
-            let dataHoraEnvio = Date(timeIntervalSinceNow: Double(onibus.datahoraenvio) ?? 0)
-
-            let tempoEmSecundos = Calendar.current.component(.second, from: dataHoraEnvio)
-            if tempoEmSecundos <= 10 {
-                var posicao = 0
-                for onibusJaAdicionado in novaListaOnibus {
-                    if onibusJaAdicionado.ordem == onibus.ordem {
-                        novaListaOnibus.remove(at: posicao)
-                    }
-                    posicao += 1
-                }
+        var onibusAntigo: Onibus = self.listaOnibus[0]
+        
+        var novaListaOnibus: [Onibus] = []
+        novaListaOnibus.append(onibusAntigo)
+        
+        var listaOrdens: [String] = []
+        listaOrdens.append(onibusAntigo.ordem)
+        
+        for i in 1 ... self.listaOnibus.count-1 {
+            let onibus = self.listaOnibus[i]
+            if onibusAntigo.ordem != onibus.ordem &&
+               !listaOrdens.contains(onibus.ordem) {
                 novaListaOnibus.append(onibus)
+                listaOrdens.append(onibus.ordem)
             }
+            onibusAntigo = onibus
         }
+        
+        listaOrdens.removeAll()
         self.listaOnibus.removeAll()
-        return novaListaOnibus
+        self.listaOnibus = novaListaOnibus
+        
+        return self.listaOnibus
     }
 }
