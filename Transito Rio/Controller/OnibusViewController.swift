@@ -16,6 +16,7 @@ class OnibusViewController: BaseViewController {
     
     // MARK: - Atributes
     private let locationManager = CLLocationManager()
+    private var minhaLocalizacao: CLLocation?
     private var latitude: Double = 0.0
     private var longitude: Double = 0.0
     private lazy var onibusViewModel: OnibusViewModel = OnibusViewModel(onibusDelegate: self)
@@ -69,7 +70,7 @@ class OnibusViewController: BaseViewController {
         //let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
         
         //let region = MKCoordinateRegion(center: coordinates, span: span)
-        let region = MKCoordinateRegion( center: coordinates, latitudinalMeters: CLLocationDistance(exactly: 1500)!, longitudinalMeters: CLLocationDistance(exactly: 1500)!)
+        let region = MKCoordinateRegion(center: coordinates, latitudinalMeters: CLLocationDistance(exactly: 1500)!, longitudinalMeters: CLLocationDistance(exactly: 1500)!)
         
         self.onibusMapView.setRegion(region, animated: true)
         self.onibusMapView.showsUserLocation = true
@@ -83,7 +84,7 @@ class OnibusViewController: BaseViewController {
             let rioDeJaneiroLatitude = -22.8968093
             let rioDeJaneiroLongitude = -43.1833839
             coordinates = CLLocationCoordinate2D(latitude: rioDeJaneiroLatitude, longitude: rioDeJaneiroLongitude)
-            region = MKCoordinateRegion( center: coordinates, latitudinalMeters: CLLocationDistance(exactly: 1500)!, longitudinalMeters: CLLocationDistance(exactly: 1500)!)
+            region = MKCoordinateRegion(center: coordinates, latitudinalMeters: CLLocationDistance(exactly: 1500)!, longitudinalMeters: CLLocationDistance(exactly: 1500)!)
         } else {
             coordinates = CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
             
@@ -119,15 +120,52 @@ class OnibusViewController: BaseViewController {
     }
     
     private func popularMapView(listaOnibus: [Onibus]) {
+        let minhaLocalizacao = CLLocation(latitude: Double(latitude), longitude: Double(longitude))
+        
         for onibus in listaOnibus {
-            let latitude = Double(onibus.latitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
-            let longitude = Double(onibus.longitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
+            let latidudaOnibus = Double(onibus.latitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
+            let longitudeOnibus = Double(onibus.longitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
             
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-            annotation.title = "\(String(localized: "numero_carro")) \(onibus.ordem) - \(String(localized: "linha_carro")) \(onibus.linha)"
+            let localizacaoOnibus = CLLocation(latitude: latidudaOnibus, longitude: longitudeOnibus)
             
-            self.onibusMapView.addAnnotation(annotation)
+            if (minhaLocalizacao.distance(from: localizacaoOnibus) <= 2000) {
+                let latitude = Double(latidudaOnibus)
+                let longitude = Double(longitudeOnibus)
+                
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                annotation.title = "\(String(localized: "numero_carro")) \(onibus.ordem) - \(String(localized: "linha_carro")) \(onibus.linha)"
+                
+                self.onibusMapView.addAnnotation(annotation)
+            }
+        }
+        
+        /**
+         Caso não tenha onibus próximo da localização do aparelho,
+         exibe os onibus no centro do Rio de Janeiro
+         */
+        if (self.onibusMapView.annotations.count == 0) {
+            let rioDeJaneiroLatitude = -22.8968093
+            let rioDeJaneiroLongitude = -43.1833839
+            let localizscaoRioDeJaneiro = CLLocation(latitude: rioDeJaneiroLatitude, longitude: rioDeJaneiroLongitude)
+            
+            for onibus in listaOnibus {
+                let latidudaOnibus = Double(onibus.latitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
+                let longitudeOnibus = Double(onibus.longitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
+                
+                let localizacaoOnibus = CLLocation(latitude: latidudaOnibus, longitude: longitudeOnibus)
+                
+                if (localizscaoRioDeJaneiro.distance(from: localizacaoOnibus) <= 2000) {
+                    let latitude = Double(latidudaOnibus)
+                    let longitude = Double(longitudeOnibus)
+                    
+                    let annotation = MKPointAnnotation()
+                    annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                    annotation.title = "\(String(localized: "numero_carro")) \(onibus.ordem) - \(String(localized: "linha_carro")) \(onibus.linha)"
+                    
+                    self.onibusMapView.addAnnotation(annotation)
+                }
+            }
         }
     }
     
@@ -161,15 +199,11 @@ class OnibusViewController: BaseViewController {
 
 // MARK: - CLLocationManagerDelegate
 extension OnibusViewController: CLLocationManagerDelegate {
-    func locationManager(
-        _ manager: CLLocationManager,
-        didChangeAuthorization status: CLAuthorizationStatus
-    ) {}
+    func locationManager(_ manager: CLLocationManager,
+                         didChangeAuthorization status: CLAuthorizationStatus) {}
     
-    func locationManager(
-        _ manager: CLLocationManager,
-        didUpdateLocations locations: [CLLocation]
-    ) {
+    func locationManager(_ manager: CLLocationManager,
+                         didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         self.latitude = locValue.latitude
         self.longitude = locValue.longitude
@@ -180,7 +214,8 @@ extension OnibusViewController: CLLocationManagerDelegate {
 
 // MARK: - MKMapViewDelegate
 extension OnibusViewController: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView,
+                 viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard annotation is MKPointAnnotation else { return nil }
 
         let identifier = "Onibus"
@@ -211,7 +246,6 @@ extension OnibusViewController: OnibusDelegate {
     
     func showError() {
         self.activityIndicatorView.hideActivityIndicatorView()
-        //self.showAlert(title: "", message: String(localized: "sem_onibus"))
         self.agendarPoximaBusca()
     }
 }
