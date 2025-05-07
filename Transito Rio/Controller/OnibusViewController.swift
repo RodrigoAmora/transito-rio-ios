@@ -123,21 +123,7 @@ class OnibusViewController: BaseViewController {
         let minhaLocalizacao = CLLocation(latitude: Double(latitude), longitude: Double(longitude))
         
         for onibus in listaOnibus {
-            let latidudaOnibus = Double(onibus.latitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
-            let longitudeOnibus = Double(onibus.longitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
-            
-            let localizacaoOnibus = CLLocation(latitude: latidudaOnibus, longitude: longitudeOnibus)
-            
-            if (minhaLocalizacao.distance(from: localizacaoOnibus) <= 2000) {
-                let latitude = Double(latidudaOnibus)
-                let longitude = Double(longitudeOnibus)
-                
-                let annotation = MKPointAnnotation()
-                annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-                annotation.title = "\(String(localized: "numero_carro")) \(onibus.ordem) - \(String(localized: "linha_carro")) \(onibus.linha)"
-                
-                self.onibusMapView.addAnnotation(annotation)
-            }
+            self.adicionarPinNoMapa(localizacao: minhaLocalizacao, onibus: onibus)
         }
         
         /**
@@ -150,22 +136,26 @@ class OnibusViewController: BaseViewController {
             let localizscaoRioDeJaneiro = CLLocation(latitude: rioDeJaneiroLatitude, longitude: rioDeJaneiroLongitude)
             
             for onibus in listaOnibus {
-                let latidudaOnibus = Double(onibus.latitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
-                let longitudeOnibus = Double(onibus.longitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
-                
-                let localizacaoOnibus = CLLocation(latitude: latidudaOnibus, longitude: longitudeOnibus)
-                
-                if (localizscaoRioDeJaneiro.distance(from: localizacaoOnibus) <= 2000) {
-                    let latitude = Double(latidudaOnibus)
-                    let longitude = Double(longitudeOnibus)
-                    
-                    let annotation = MKPointAnnotation()
-                    annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-                    annotation.title = "\(String(localized: "numero_carro")) \(onibus.ordem) - \(String(localized: "linha_carro")) \(onibus.linha)"
-                    
-                    self.onibusMapView.addAnnotation(annotation)
-                }
+                self.adicionarPinNoMapa(localizacao: localizscaoRioDeJaneiro, onibus: onibus)
             }
+        }
+    }
+    
+    private func adicionarPinNoMapa(localizacao: CLLocation, onibus: Onibus) {
+        let latidudaOnibus = Double(onibus.latitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
+        let longitudeOnibus = Double(onibus.longitude.replacingOccurrences(of: ",", with: ".")) ?? 0.0
+        
+        let localizacaoOnibus = CLLocation(latitude: latidudaOnibus, longitude: longitudeOnibus)
+        
+        if (localizacao.distance(from: localizacaoOnibus) <= 2000) {
+            let latitude = Double(latidudaOnibus)
+            let longitude = Double(longitudeOnibus)
+            
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            annotation.title = "\(String(localized: "numero_carro")) \(onibus.ordem) - \(String(localized: "linha_carro")) \(onibus.linha)"
+            
+            self.onibusMapView.addAnnotation(annotation)
         }
     }
     
